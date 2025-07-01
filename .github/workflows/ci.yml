@@ -38,8 +38,9 @@ jobs:
       # Cache node_modules
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.16.0
           cache: 'npm'
+          mirror: "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release"
        
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
